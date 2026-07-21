@@ -1,0 +1,101 @@
+openapi: 3.0.3
+info:
+  title: Client Management API
+  version: 1.0.0
+paths:
+  /clients:
+    post:
+      summary: Create a client
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateClientRequest'
+      responses:
+        '201':
+          description: Client created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ClientResponse'
+        '400':
+          description: Validation error
+  /clients/{coreClientId}:
+    put:
+      summary: Update a client by coreClientId
+      parameters:
+        - name: coreClientId
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UpdateClientRequest'
+      responses:
+        '200':
+          description: Client updated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ClientResponse'
+        '400':
+          description: Validation error
+        '401':
+          description: Authentication error
+    delete:
+      summary: Delete a client by coreClientId
+      parameters:
+        - name: coreClientId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Client deleted
+        '400':
+          description: Validation error
+        '401':
+          description: Authentication error
+components:
+  schemas:
+    CreateClientRequest:
+      type: object
+      required:
+        - coreClientId
+        - clientName
+        - onboardingDate
+      properties:
+        coreClientId:
+          type: string
+        clientName:
+          type: string
+        onboardingDate:
+          type: string
+          format: date
+    UpdateClientRequest:
+      type: object
+      properties:
+        clientName:
+          type: string
+        onboardingDate:
+          type: string
+          format: date
+    ClientResponse:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        coreClientId:
+          type: string
+        clientName:
+          type: string
+        onboardingDate:
+          type: string
+          format: date

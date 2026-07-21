@@ -1,0 +1,11 @@
+D:\SDD-WS\SDD\src\main\java\com\example\clientservice\config\SecurityConfig.java
+D:\SDD-WS\SDD\src\main\java\com\example\clientservice\model\Client.java
+D:\SDD-WS\SDD\src\main\java\com\example\clientservice\service\ClientService.java
+D:\SDD-WS\SDD\src\main\java\com\example\clientservice\controller\ClientController.java
+D:\SDD-WS\SDD\src\main\java\com\example\clientservice\repository\ClientRepository.java
+D:\SDD-WS\SDD\src\main\java\com\example\clientservice\dto\ClientResponse.java
+D:\SDD-WS\SDD\src\main\java\com\example\clientservice\ClientServiceApplication.java
+D:\SDD-WS\SDD\src\main\java\com\example\clientservice\exception\GlobalExceptionHandler.java
+D:\SDD-WS\SDD\src\main\java\com\example\clientservice\dto\UpdateClientRequest.java
+D:\SDD-WS\SDD\src\main\java\com\example\clientservice\exception\ApiErrorResponse.java
+D:\SDD-WS\SDD\src\main\java\com\example\clientservice\dto\CreateClientRequest.java

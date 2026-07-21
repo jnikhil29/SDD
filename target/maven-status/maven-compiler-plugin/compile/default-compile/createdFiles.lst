@@ -1,0 +1,11 @@
+com\example\clientservice\service\ClientService.class
+com\example\clientservice\dto\CreateClientRequest.class
+com\example\clientservice\exception\ApiErrorResponse.class
+com\example\clientservice\config\SecurityConfig.class
+com\example\clientservice\ClientServiceApplication.class
+com\example\clientservice\model\Client.class
+com\example\clientservice\repository\ClientRepository.class
+com\example\clientservice\dto\UpdateClientRequest.class
+com\example\clientservice\controller\ClientController.class
+com\example\clientservice\exception\GlobalExceptionHandler.class
+com\example\clientservice\dto\ClientResponse.class
